@@ -9,5 +9,6 @@ namespace POS.HDT.Kanri.Logic
     public class Class1
     {
         //TODO: Code Logic here
+        // Commit thu
     }
 }
