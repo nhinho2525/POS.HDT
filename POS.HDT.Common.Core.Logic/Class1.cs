@@ -8,6 +8,6 @@ namespace POS.HDT.Common.Core.Logic
 {
     public class Class1
     {
-       
+       //LOGIC 
     }
 }
