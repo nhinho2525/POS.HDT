@@ -48,6 +48,9 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\Assemblies\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -79,6 +82,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\DataAccess.cs" />
+    <Compile Include="DAL\Ex.cs" />
     <Compile Include="POSService.asmx.cs">
       <DependentUpon>POSService.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -86,7 +91,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\" />
+    <ProjectReference Include="..\POS.HDT.Common.Data.Domain\POS.HDT.Common.Data.Domain.csproj">
+      <Project>{c179cb44-b731-4e7d-9e3a-20fc15ed183a}</Project>
+      <Name>POS.HDT.Common.Data.Domain</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
