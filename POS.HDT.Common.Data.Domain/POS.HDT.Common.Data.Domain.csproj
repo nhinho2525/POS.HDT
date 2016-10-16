@@ -40,13 +40,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Order.cs" />
+    <Compile Include="Orders.cs" />
     <Compile Include="OrderDetails.cs" />
+    <Compile Include="ProductGroups.cs" />
+    <Compile Include="Products.cs" />
     <Compile Include="ReceiptDetails.cs" />
     <Compile Include="ReceiptInfo.cs" />
     <Compile Include="ReceiptMember.cs" />
     <Compile Include="Receipts.cs" />
-    <Compile Include="User.cs" />
+    <Compile Include="Roles.cs" />
+    <Compile Include="Suppliers.cs" />
+    <Compile Include="Tables.cs" />
+    <Compile Include="Units.cs" />
+    <Compile Include="Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

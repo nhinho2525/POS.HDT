@@ -8,26 +8,18 @@ namespace POS.HDT.Common.Data.Domain
 {
     public class Receipts
     {
-        public string ReceiptId { get; set; }
-        public string Note { get; set; }
-        public string NoOfCustumers { get; set; }
-        //public string group { get; set; }
-        public string Status { get; set; }
-
-        public string TotalAmountBeforeTax { get; set; }
-        public string TotalTax { get; set; }
-        public string TotalAmount { get; set; }
-        public string DiscountAmount { get; set; }
-        public string TotalMoney { get; set; }
-
-        public string CashPayAmt { get; set; }
-        public string CardPayAmt { get; set; }
-        public string ReturnAmt { get; set; }
-
+        public string RecieptId { get; set; }
+        public string TableId { get; set; }
+        public string RecieptNote { get; set; }
+        public string RecieptStatus { get; set; }
+        // 0: chưa thanh toán
+        // 1: đã ra hóa đơn ( tất cả detail )
+        public string RecieptTax { get; set; }
+        public string RecieptMoney { get; set; }
+        public string RecieptDiscount { get; set; }
+        public string RecieptPercentDiscount { get; set; }
         public string CreatedDate { get; set; }
         public string CreatedBy { get; set; }
-        public string ModifiedBy { get; set; }
-        public string ModifiedDate { get; set; }
     }
 
     public class ReceiptsCard
