@@ -37,17 +37,17 @@ DROP TABLE IF EXISTS `input`;
 
 CREATE TABLE `input` (
   `InputId` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `Sophieu` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `SophieuDate` date DEFAULT NULL,
-  `RecieptId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `RecieptDate` datetime DEFAULT NULL,
+  `Ballot` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `BallotDate` date DEFAULT NULL,
+  `ReceiptId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ReceiptDate` datetime DEFAULT NULL,
   `SupplierId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `StoreId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `Paid` tinyint(1) DEFAULT NULL,
   `InputDiscount` decimal(5,2) DEFAULT NULL,
   `InputNote` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `UserId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `InputVAT` int(11) DEFAULT NULL,
+  `CreatedBy` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `CreatedDate` datetime DEFAULT NULL,
   PRIMARY KEY (`InputId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -78,7 +78,7 @@ DROP TABLE IF EXISTS `measure`;
 CREATE TABLE `measure` (
   `MeasureId` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `MeasureNote` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `UserId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `CreatedBy` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `CreatedDate` datetime DEFAULT NULL,
   PRIMARY KEY (`MeasureId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -90,10 +90,10 @@ CREATE TABLE `measure` (
 DROP TABLE IF EXISTS `measuredetail`;
 
 CREATE TABLE `measuredetail` (
-  `MeasureDetailId` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `IngredientId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `MeasureId` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `IngredientId` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `MeasureQty` decimal(20,0) DEFAULT NULL,
-  PRIMARY KEY (`MeasureDetailId`)
+  PRIMARY KEY (`MeasureId`,`IngredientId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `measuredetail` */
@@ -145,12 +145,12 @@ DROP TABLE IF EXISTS `output`;
 
 CREATE TABLE `output` (
   `OutputId` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `Sophieu` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `SophieuDate` date DEFAULT NULL,
+  `Ballot` varchar(10) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `BallotDate` date DEFAULT NULL,
   `OutputReason` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `StoreId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `OutputType` tinyint(1) DEFAULT NULL,
-  `RecieptId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ReceiptId` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `OutputNote` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
   `CreatedBy` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
   `CreatedDate` datetime DEFAULT NULL,
@@ -198,6 +198,20 @@ CREATE TABLE `productgroup` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `productgroup` */
+
+/*Table structure for table `productprice` */
+
+DROP TABLE IF EXISTS `productprice`;
+
+CREATE TABLE `productprice` (
+  `ProductId` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `CreatedDate` datetime NOT NULL,
+  `CreatedBy` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ProductPrice` decimal(20,0) DEFAULT NULL,
+  PRIMARY KEY (`ProductId`,`CreatedDate`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `productprice` */
 
 /*Table structure for table `receipt` */
 
