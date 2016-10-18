@@ -51,6 +51,7 @@
     <Reference Include="MySql.Data">
       <HintPath>..\Assemblies\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -82,8 +83,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL\DataAccess.cs" />
-    <Compile Include="DAL\Ex.cs" />
     <Compile Include="POSService.asmx.cs">
       <DependentUpon>POSService.asmx</DependentUpon>
       <SubType>Component</SubType>
@@ -91,9 +90,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\POS.HDT.Common.Data.Domain\POS.HDT.Common.Data.Domain.csproj">
-      <Project>{c179cb44-b731-4e7d-9e3a-20fc15ed183a}</Project>
-      <Name>POS.HDT.Common.Data.Domain</Name>
+    <ProjectReference Include="..\POS.HDT.Services.DAL\POS.HDT.Services.DAL.csproj">
+      <Project>{ec0790b2-bd58-44e0-9a57-f7c0fdeb007b}</Project>
+      <Name>POS.HDT.Services.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

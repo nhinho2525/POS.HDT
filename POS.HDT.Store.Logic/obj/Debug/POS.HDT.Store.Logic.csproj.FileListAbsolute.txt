@@ -1,0 +1,4 @@
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Store.Logic.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Store.Logic.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\obj\Debug\POS.HDT.Store.Logic.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\obj\Debug\POS.HDT.Store.Logic.pdb

@@ -1,0 +1,4 @@
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\bin\Debug\POS.HDT.Common.Data.Domain.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\bin\Debug\POS.HDT.Common.Data.Domain.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\obj\Debug\POS.HDT.Common.Data.Domain.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\obj\Debug\POS.HDT.Common.Data.Domain.pdb

@@ -41,16 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ingredients.cs" />
-    <Compile Include="inputdetails.cs" />
+    <Compile Include="Inputdetails.cs" />
     <Compile Include="Inputs.cs" />
-    <Compile Include="measuredetails.cs" />
-    <Compile Include="measures.cs" />
+    <Compile Include="Measuredetails.cs" />
+    <Compile Include="Measures.cs" />
     <Compile Include="Orders.cs" />
     <Compile Include="OrderDetails.cs" />
     <Compile Include="Outputdetails.cs" />
     <Compile Include="Outputs.cs" />
     <Compile Include="ProductGroups.cs" />
+    <Compile Include="ProductPrices.cs" />
     <Compile Include="Products.cs" />
+    <Compile Include="ReceiptDetails.cs" />
     <Compile Include="Receipts.cs" />
     <Compile Include="Roles.cs" />
     <Compile Include="Suppliers.cs" />

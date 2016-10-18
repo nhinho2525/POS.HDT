@@ -1,0 +1,4 @@
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Base.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Base.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.pdb

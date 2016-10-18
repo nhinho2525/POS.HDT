@@ -1,0 +1,5 @@
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\bin\Debug\POS.HDT.Common.Data.Tables.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\bin\Debug\POS.HDT.Common.Data.Tables.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.csprojResolveAssemblyReference.cache
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.pdb

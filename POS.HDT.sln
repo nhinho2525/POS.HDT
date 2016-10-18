@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "POS.HDT.Common", "POS.HDT.Common", "{7E8231BB-8945-4C01-B744-BCC30572DD6D}"
 EndProject
@@ -34,6 +34,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.HDT.Kanri.Logic", "POS.HDT.Kanri.Logic\POS.HDT.Kanri.Logic.csproj", "{881D0386-CA40-4BB6-A67C-DD6B7CFC4469}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.HDT.Store.Logic", "POS.HDT.Store.Logic\POS.HDT.Store.Logic.csproj", "{8EE8B555-4712-4DB0-977A-0EFC3BC775A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.HDT.Services.DAL", "POS.HDT.Services.DAL\POS.HDT.Services.DAL.csproj", "{EC0790B2-BD58-44E0-9A57-F7C0FDEB007B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{8EE8B555-4712-4DB0-977A-0EFC3BC775A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8EE8B555-4712-4DB0-977A-0EFC3BC775A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8EE8B555-4712-4DB0-977A-0EFC3BC775A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC0790B2-BD58-44E0-9A57-F7C0FDEB007B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC0790B2-BD58-44E0-9A57-F7C0FDEB007B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC0790B2-BD58-44E0-9A57-F7C0FDEB007B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC0790B2-BD58-44E0-9A57-F7C0FDEB007B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,5 +104,6 @@ Global
 		{D93458C6-D31E-4727-A6C8-49ADDE520D5E} = {946E7A69-A4C7-44D0-9F33-5E171AAF0BDF}
 		{881D0386-CA40-4BB6-A67C-DD6B7CFC4469} = {4A0027CC-8910-4A61-B01A-C19FF279D2E2}
 		{8EE8B555-4712-4DB0-977A-0EFC3BC775A5} = {7712CB7D-A8CE-4821-8B39-1BDE887C146C}
+		{EC0790B2-BD58-44E0-9A57-F7C0FDEB007B} = {946E7A69-A4C7-44D0-9F33-5E171AAF0BDF}
 	EndGlobalSection
 EndGlobal

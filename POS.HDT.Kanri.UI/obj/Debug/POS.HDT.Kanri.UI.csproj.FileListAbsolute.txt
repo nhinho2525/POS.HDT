@@ -1,2 +1,9 @@
 D:\DATA\ABC\PROJECTs\Soft\POS.HDT\POS.HDT.Kanri.UI\bin\Debug\POS.HDT.Kanri.UI.exe.config
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\bin\Debug\POS.HDT.Kanri.UI.exe.config
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\bin\Debug\POS.HDT.Kanri.UI.exe
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\bin\Debug\POS.HDT.Kanri.UI.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\obj\Debug\POS.HDT.Kanri.UI.csprojResolveAssemblyReference.cache
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\obj\Debug\POS.HDT.Kanri.UI.Properties.Resources.resources
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\obj\Debug\POS.HDT.Kanri.UI.csproj.GenerateResource.Cache
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\obj\Debug\POS.HDT.Kanri.UI.exe
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.UI\obj\Debug\POS.HDT.Kanri.UI.pdb

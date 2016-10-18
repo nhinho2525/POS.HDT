@@ -1,0 +1,4 @@
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Kanri.Logic.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Kanri.Logic.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\obj\Debug\POS.HDT.Kanri.Logic.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\obj\Debug\POS.HDT.Kanri.Logic.pdb
