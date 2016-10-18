@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace POS.HDT.Kanri.UI
 {
-    public partial class Form1 : Form
+    public partial class frmRole : Form
     {
-        public Form1()
+        public frmRole()
         {
             InitializeComponent();
         }

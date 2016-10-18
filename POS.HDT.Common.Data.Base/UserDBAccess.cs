@@ -122,5 +122,26 @@ namespace POS.HDT.Common.Data.Base
 
             return user;
         }
+        /// <summary>
+        /// Get all Users
+        /// </summary>
+        /// <returns></returns>
+        public DataTable GetUsers()
+        {
+            DataTable dtUsers = new DataTable();
+            DataSet dataset = new DataSet();
+            string queryStr = "SELECT * FROM users";
+            PosService.DataQuery(Username, Password, queryStr, ref dataset, "x", ref errorString);
+
+            if (!string.IsNullOrEmpty(errorString))
+                return null;
+
+            if (dataset.Tables["x"].Rows.Count > 0)
+            {
+                dtUsers = dataset.Tables["x"];
+                
+            }
+            return dtUsers;
+        }
     }
 }
