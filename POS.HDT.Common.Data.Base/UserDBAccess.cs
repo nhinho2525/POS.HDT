@@ -6,7 +6,7 @@ namespace POS.HDT.Common.Data.Base
 {
     public class UserDBAccess : DBAccess
     {
-        
+        //Test commit
         public void Add(Users obj, string username)
         {
             long id = 0;

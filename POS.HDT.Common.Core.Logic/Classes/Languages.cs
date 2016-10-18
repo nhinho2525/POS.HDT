@@ -78,6 +78,30 @@ namespace POS.HDT.Common.Core.Logic.Classes
         #endregion
 
         #region Get Resource
+        public static string GetResource(string skey)
+        {
+            string sResult = string.Empty;
+            //string FileName = "~/Resource/LangResource.xls";
+            DataTableCollection dtc = ReadExcelFromURL(@"LangResource.xls");
+            Hashtable HasTableLang = new Hashtable();
+            try
+            {
+                int LangId = GetLangIdBySession(StrCulture);
+                //if (LangId == 5)
+                //{
+                //    LangId = 1;
+                //}
+                DataTable dtLang = dtc[LangId];
+                HasTableLang = convertDataTableToHashTable(dtLang, "Column1", "Column2");
+                sResult = (string)HasTableLang[skey];
+            }
+            catch (Exception ex)
+            {
+                sResult = null;
+            }
+            return sResult;
+        }
+
         public static string GetResource(string skey, string Language)
         {
             string sResult = string.Empty;
