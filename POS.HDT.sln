@@ -37,7 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.HDT.Store.Logic", "POS.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.HDT.Services.DAL", "POS.HDT.Services.DAL\POS.HDT.Services.DAL.csproj", "{EC0790B2-BD58-44E0-9A57-F7C0FDEB007B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.HDT.Common.UI", "POS.HDT.Common.UI\POS.HDT.Common.UI.csproj", "{7FEAF88F-DC56-4690-B3F3-C8E337700E23}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POS.HDT.Common.Core.UI", "POS.HDT.Common.UI\POS.HDT.Common.Core.UI.csproj", "{7FEAF88F-DC56-4690-B3F3-C8E337700E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

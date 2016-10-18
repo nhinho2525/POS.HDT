@@ -7,13 +7,13 @@ namespace POS.HDT.Common.Core.Logic.Enums
     {
 
         /// <summary>
-        /// Status of bracelet
+        /// Defined types of messages: Success/Warning/Error.
         /// </summary>
-        public enum STATUSBRACELET
+        public enum TypeOfMessage
         {
-            UnusedStatus = 1,
-            UsedStatus,
-            LossStaus
+            Success,
+            Warning,
+            Error,
         }
 
         /// <summary>

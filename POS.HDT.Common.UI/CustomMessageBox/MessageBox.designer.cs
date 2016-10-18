@@ -1,4 +1,4 @@
-﻿namespace POS.HDT.Common.UI.CustomMessageBox
+﻿namespace POS.HDT.Common.Core.UI.CustomMessageBox
 {
     partial class MessageBox
     {
@@ -45,7 +45,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.BackgroundImage = global::VVPosS.Properties.Resources.bg00;
+            //this.panel1.BackgroundImage = global::VVPosS.Properties.Resources.bg00;
             this.panel1.Controls.Add(this.btnOK);
             this.panel1.Controls.Add(this.btnCancel);
             this.panel1.Controls.Add(this.btnAccept);
@@ -63,7 +63,7 @@
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.Color.Black;
-            this.btnOK.Image = global::VVPosS.Properties.Resources._1404477833_f_check_256;
+            //this.btnOK.Image = global::VVPosS.Properties.Resources._1404477833_f_check_256;
             this.btnOK.Location = new System.Drawing.Point(83, 6);
             this.btnOK.Margin = new System.Windows.Forms.Padding(2);
             this.btnOK.Name = "btnOK";
@@ -81,7 +81,7 @@
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.Black;
-            this.btnCancel.Image = global::VVPosS.Properties.Resources._1404478970_f_cross;
+            //this.btnCancel.Image = global::VVPosS.Properties.Resources._1404478970_f_cross;
             this.btnCancel.Location = new System.Drawing.Point(345, 6);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
@@ -99,7 +99,7 @@
             this.btnAccept.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAccept.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAccept.ForeColor = System.Drawing.Color.Black;
-            this.btnAccept.Image = global::VVPosS.Properties.Resources._1404477833_f_check_256;
+            //this.btnAccept.Image = global::VVPosS.Properties.Resources._1404477833_f_check_256;
             this.btnAccept.Location = new System.Drawing.Point(214, 6);
             this.btnAccept.Margin = new System.Windows.Forms.Padding(2);
             this.btnAccept.Name = "btnAccept";
@@ -159,7 +159,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::VVPosS.Properties.Resources.messagebox;
+            //this.BackgroundImage = global::VVPosS.Properties.Resources.messagebox;
             this.ClientSize = new System.Drawing.Size(489, 200);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
