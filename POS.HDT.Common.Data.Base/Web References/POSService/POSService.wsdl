@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsServiceReady">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsServiceReadyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsServiceReadyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsDataReady">
+        <s:complexType />
+      </s:element>
+      <s:element name="IsDataReadyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsDataReadyResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUser">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsername" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsUserResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsUserResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pTableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pDataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataStoreProcQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryCmd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataStoreProcQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pDataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataStoreProcQuery_Param">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryCmd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DataStoreProcQuery_ParamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pDataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataStoreProcExecute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryCmd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="param" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataStoreProcExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="result" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataStoreProceduceAndMultiQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPassword" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryCmd" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pParam" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryOrder" type="tns:ArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="pResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataStoreProceduceAndMultiQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryString" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecuteId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryString" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecuteIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="pId" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataMultiExecute">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pQueryArrString" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataMultiExecuteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataScalar">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pStringQuery" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pObject" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataScalarResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pObject" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataCommandBuilderUpdate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDataset">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="pTableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pToTable" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataCommandBuilderUpdateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DataCommandBuilderUpdateResult" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSaveImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pImageBuffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="pId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pColumnIdName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pColumnImageName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSaveImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataReadImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pColumnIdName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pColumnImageName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTableName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataReadImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DataReadImageResult" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecuteForProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unit" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UnitPrice" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsNode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPrint" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="CreateDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecuteForProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecuteEdit_ForProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Name3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Unit" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="UnitPrice" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsNode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPrint" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Notes" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="ParentId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UpdateDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Image" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ProductId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataExecuteEdit_ForProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tran_Insert_for_Order">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPrinterName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parram" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="listParam" type="tns:ArrayOfArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="paramDesk" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPrint" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfArrayOfArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfArrayOfString" nillable="true" type="tns:ArrayOfArrayOfString" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Tran_Insert_for_OrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPrint" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrderId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tran_Insert_Receipt">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Receipt" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="listReceiptDetail" type="tns:ArrayOfArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="listReceiptCard" type="tns:ArrayOfArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptMember" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptInfo" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Tran_Insert_ReceiptResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="ReceiptID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImage_IntoObject">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pImageBuffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="ObjectId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldImgName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImage_IntoObjectResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImage_IntoEmployee">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pImageBuffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImage_IntoEmployeeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImage_IntoProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pImageBuffer" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="EmployeeId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="OldImgName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveImage_IntoProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Print_Order">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OrderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Lang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PlaceOfPrinting" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StatusPrint" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Print_OrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_DeskId_For_Order">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prm" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDeskIdTo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDeskIdFrom" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_DeskId_For_OrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Order_Detail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pLang" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPrinterName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pOrderId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPrm_O" type="tns:ArrayOfArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="pLst_ODNew" type="tns:ArrayOfArrayOfArrayOfString" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsPrint" type="s:boolean" />
+            <s:element minOccurs="1" maxOccurs="1" name="pHaveDiscount" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Update_Order_DetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="res" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetValueScoreEx">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetValueScoreExResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetValueScoreExResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPriceScore">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetPriceScoreResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPriceScoreResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Write_Score_Value">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pUsernameOrId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pScoreValue" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPriceScore" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Write_Score_ValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pError" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsServiceReadySoapIn">
+    <wsdl:part name="parameters" element="tns:IsServiceReady" />
+  </wsdl:message>
+  <wsdl:message name="IsServiceReadySoapOut">
+    <wsdl:part name="parameters" element="tns:IsServiceReadyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsDataReadySoapIn">
+    <wsdl:part name="parameters" element="tns:IsDataReady" />
+  </wsdl:message>
+  <wsdl:message name="IsDataReadySoapOut">
+    <wsdl:part name="parameters" element="tns:IsDataReadyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsUserSoapIn">
+    <wsdl:part name="parameters" element="tns:IsUser" />
+  </wsdl:message>
+  <wsdl:message name="IsUserSoapOut">
+    <wsdl:part name="parameters" element="tns:IsUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:DataQuery" />
+  </wsdl:message>
+  <wsdl:message name="DataQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:DataQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProcQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:DataStoreProcQuery" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProcQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:DataStoreProcQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProcQuery_ParamSoapIn">
+    <wsdl:part name="parameters" element="tns:DataStoreProcQuery_Param" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProcQuery_ParamSoapOut">
+    <wsdl:part name="parameters" element="tns:DataStoreProcQuery_ParamResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProcExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:DataStoreProcExecute" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProcExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:DataStoreProcExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProceduceAndMultiQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:DataStoreProceduceAndMultiQuery" />
+  </wsdl:message>
+  <wsdl:message name="DataStoreProceduceAndMultiQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:DataStoreProceduceAndMultiQueryResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:DataExecute" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:DataExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteIdSoapIn">
+    <wsdl:part name="parameters" element="tns:DataExecuteId" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteIdSoapOut">
+    <wsdl:part name="parameters" element="tns:DataExecuteIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataMultiExecuteSoapIn">
+    <wsdl:part name="parameters" element="tns:DataMultiExecute" />
+  </wsdl:message>
+  <wsdl:message name="DataMultiExecuteSoapOut">
+    <wsdl:part name="parameters" element="tns:DataMultiExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataScalarSoapIn">
+    <wsdl:part name="parameters" element="tns:DataScalar" />
+  </wsdl:message>
+  <wsdl:message name="DataScalarSoapOut">
+    <wsdl:part name="parameters" element="tns:DataScalarResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataCommandBuilderUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:DataCommandBuilderUpdate" />
+  </wsdl:message>
+  <wsdl:message name="DataCommandBuilderUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:DataCommandBuilderUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataSaveImageSoapIn">
+    <wsdl:part name="parameters" element="tns:DataSaveImage" />
+  </wsdl:message>
+  <wsdl:message name="DataSaveImageSoapOut">
+    <wsdl:part name="parameters" element="tns:DataSaveImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataReadImageSoapIn">
+    <wsdl:part name="parameters" element="tns:DataReadImage" />
+  </wsdl:message>
+  <wsdl:message name="DataReadImageSoapOut">
+    <wsdl:part name="parameters" element="tns:DataReadImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteForProductSoapIn">
+    <wsdl:part name="parameters" element="tns:DataExecuteForProduct" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteForProductSoapOut">
+    <wsdl:part name="parameters" element="tns:DataExecuteForProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteEdit_ForProductSoapIn">
+    <wsdl:part name="parameters" element="tns:DataExecuteEdit_ForProduct" />
+  </wsdl:message>
+  <wsdl:message name="DataExecuteEdit_ForProductSoapOut">
+    <wsdl:part name="parameters" element="tns:DataExecuteEdit_ForProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tran_Insert_for_OrderSoapIn">
+    <wsdl:part name="parameters" element="tns:Tran_Insert_for_Order" />
+  </wsdl:message>
+  <wsdl:message name="Tran_Insert_for_OrderSoapOut">
+    <wsdl:part name="parameters" element="tns:Tran_Insert_for_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Tran_Insert_ReceiptSoapIn">
+    <wsdl:part name="parameters" element="tns:Tran_Insert_Receipt" />
+  </wsdl:message>
+  <wsdl:message name="Tran_Insert_ReceiptSoapOut">
+    <wsdl:part name="parameters" element="tns:Tran_Insert_ReceiptResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveImage_IntoObjectSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveImage_IntoObject" />
+  </wsdl:message>
+  <wsdl:message name="SaveImage_IntoObjectSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveImage_IntoObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveImage_IntoEmployeeSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveImage_IntoEmployee" />
+  </wsdl:message>
+  <wsdl:message name="SaveImage_IntoEmployeeSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveImage_IntoEmployeeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveImage_IntoProductSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveImage_IntoProduct" />
+  </wsdl:message>
+  <wsdl:message name="SaveImage_IntoProductSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveImage_IntoProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="Print_OrderSoapIn">
+    <wsdl:part name="parameters" element="tns:Print_Order" />
+  </wsdl:message>
+  <wsdl:message name="Print_OrderSoapOut">
+    <wsdl:part name="parameters" element="tns:Print_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_DeskId_For_OrderSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_DeskId_For_Order" />
+  </wsdl:message>
+  <wsdl:message name="Update_DeskId_For_OrderSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_DeskId_For_OrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="Update_Order_DetailSoapIn">
+    <wsdl:part name="parameters" element="tns:Update_Order_Detail" />
+  </wsdl:message>
+  <wsdl:message name="Update_Order_DetailSoapOut">
+    <wsdl:part name="parameters" element="tns:Update_Order_DetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetValueScoreExSoapIn">
+    <wsdl:part name="parameters" element="tns:GetValueScoreEx" />
+  </wsdl:message>
+  <wsdl:message name="GetValueScoreExSoapOut">
+    <wsdl:part name="parameters" element="tns:GetValueScoreExResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceScoreSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPriceScore" />
+  </wsdl:message>
+  <wsdl:message name="GetPriceScoreSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPriceScoreResponse" />
+  </wsdl:message>
+  <wsdl:message name="Write_Score_ValueSoapIn">
+    <wsdl:part name="parameters" element="tns:Write_Score_Value" />
+  </wsdl:message>
+  <wsdl:message name="Write_Score_ValueSoapOut">
+    <wsdl:part name="parameters" element="tns:Write_Score_ValueResponse" />
+  </wsdl:message>
+  <wsdl:portType name="POSServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceReady">
+      <wsdl:input message="tns:IsServiceReadySoapIn" />
+      <wsdl:output message="tns:IsServiceReadySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsDataReady">
+      <wsdl:input message="tns:IsDataReadySoapIn" />
+      <wsdl:output message="tns:IsDataReadySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsUser">
+      <wsdl:input message="tns:IsUserSoapIn" />
+      <wsdl:output message="tns:IsUserSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataQuery">
+      <wsdl:input message="tns:DataQuerySoapIn" />
+      <wsdl:output message="tns:DataQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcQuery">
+      <wsdl:input message="tns:DataStoreProcQuerySoapIn" />
+      <wsdl:output message="tns:DataStoreProcQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcQuery_Param">
+      <wsdl:input message="tns:DataStoreProcQuery_ParamSoapIn" />
+      <wsdl:output message="tns:DataStoreProcQuery_ParamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcExecute">
+      <wsdl:input message="tns:DataStoreProcExecuteSoapIn" />
+      <wsdl:output message="tns:DataStoreProcExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProceduceAndMultiQuery">
+      <wsdl:input message="tns:DataStoreProceduceAndMultiQuerySoapIn" />
+      <wsdl:output message="tns:DataStoreProceduceAndMultiQuerySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataExecute">
+      <wsdl:input message="tns:DataExecuteSoapIn" />
+      <wsdl:output message="tns:DataExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteId">
+      <wsdl:input message="tns:DataExecuteIdSoapIn" />
+      <wsdl:output message="tns:DataExecuteIdSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataMultiExecute">
+      <wsdl:input message="tns:DataMultiExecuteSoapIn" />
+      <wsdl:output message="tns:DataMultiExecuteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataScalar">
+      <wsdl:input message="tns:DataScalarSoapIn" />
+      <wsdl:output message="tns:DataScalarSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataCommandBuilderUpdate">
+      <wsdl:input message="tns:DataCommandBuilderUpdateSoapIn" />
+      <wsdl:output message="tns:DataCommandBuilderUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataSaveImage">
+      <wsdl:input message="tns:DataSaveImageSoapIn" />
+      <wsdl:output message="tns:DataSaveImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataReadImage">
+      <wsdl:input message="tns:DataReadImageSoapIn" />
+      <wsdl:output message="tns:DataReadImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteForProduct">
+      <wsdl:input message="tns:DataExecuteForProductSoapIn" />
+      <wsdl:output message="tns:DataExecuteForProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteEdit_ForProduct">
+      <wsdl:input message="tns:DataExecuteEdit_ForProductSoapIn" />
+      <wsdl:output message="tns:DataExecuteEdit_ForProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tran_Insert_for_Order">
+      <wsdl:input message="tns:Tran_Insert_for_OrderSoapIn" />
+      <wsdl:output message="tns:Tran_Insert_for_OrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Tran_Insert_Receipt">
+      <wsdl:input message="tns:Tran_Insert_ReceiptSoapIn" />
+      <wsdl:output message="tns:Tran_Insert_ReceiptSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoObject">
+      <wsdl:input message="tns:SaveImage_IntoObjectSoapIn" />
+      <wsdl:output message="tns:SaveImage_IntoObjectSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoEmployee">
+      <wsdl:input message="tns:SaveImage_IntoEmployeeSoapIn" />
+      <wsdl:output message="tns:SaveImage_IntoEmployeeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoProduct">
+      <wsdl:input message="tns:SaveImage_IntoProductSoapIn" />
+      <wsdl:output message="tns:SaveImage_IntoProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Print_Order">
+      <wsdl:input message="tns:Print_OrderSoapIn" />
+      <wsdl:output message="tns:Print_OrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_DeskId_For_Order">
+      <wsdl:input message="tns:Update_DeskId_For_OrderSoapIn" />
+      <wsdl:output message="tns:Update_DeskId_For_OrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Update_Order_Detail">
+      <wsdl:input message="tns:Update_Order_DetailSoapIn" />
+      <wsdl:output message="tns:Update_Order_DetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetValueScoreEx">
+      <wsdl:input message="tns:GetValueScoreExSoapIn" />
+      <wsdl:output message="tns:GetValueScoreExSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceScore">
+      <wsdl:input message="tns:GetPriceScoreSoapIn" />
+      <wsdl:output message="tns:GetPriceScoreSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Write_Score_Value">
+      <wsdl:input message="tns:Write_Score_ValueSoapIn" />
+      <wsdl:output message="tns:Write_Score_ValueSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="POSServiceSoap" type="tns:POSServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceReady">
+      <soap:operation soapAction="http://tempuri.org/IsServiceReady" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDataReady">
+      <soap:operation soapAction="http://tempuri.org/IsDataReady" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUser">
+      <soap:operation soapAction="http://tempuri.org/IsUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataQuery">
+      <soap:operation soapAction="http://tempuri.org/DataQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcQuery">
+      <soap:operation soapAction="http://tempuri.org/DataStoreProcQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcQuery_Param">
+      <soap:operation soapAction="http://tempuri.org/DataStoreProcQuery_Param" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcExecute">
+      <soap:operation soapAction="http://tempuri.org/DataStoreProcExecute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProceduceAndMultiQuery">
+      <soap:operation soapAction="http://tempuri.org/DataStoreProceduceAndMultiQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecute">
+      <soap:operation soapAction="http://tempuri.org/DataExecute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteId">
+      <soap:operation soapAction="http://tempuri.org/DataExecuteId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataMultiExecute">
+      <soap:operation soapAction="http://tempuri.org/DataMultiExecute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataScalar">
+      <soap:operation soapAction="http://tempuri.org/DataScalar" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataCommandBuilderUpdate">
+      <soap:operation soapAction="http://tempuri.org/DataCommandBuilderUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataSaveImage">
+      <soap:operation soapAction="http://tempuri.org/DataSaveImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataReadImage">
+      <soap:operation soapAction="http://tempuri.org/DataReadImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteForProduct">
+      <soap:operation soapAction="http://tempuri.org/DataExecuteForProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteEdit_ForProduct">
+      <soap:operation soapAction="http://tempuri.org/DataExecuteEdit_ForProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tran_Insert_for_Order">
+      <soap:operation soapAction="http://tempuri.org/Tran_Insert_for_Order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tran_Insert_Receipt">
+      <soap:operation soapAction="http://tempuri.org/Tran_Insert_Receipt" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoObject">
+      <soap:operation soapAction="http://tempuri.org/SaveImage_IntoObject" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoEmployee">
+      <soap:operation soapAction="http://tempuri.org/SaveImage_IntoEmployee" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoProduct">
+      <soap:operation soapAction="http://tempuri.org/SaveImage_IntoProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Print_Order">
+      <soap:operation soapAction="http://tempuri.org/Print_Order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_DeskId_For_Order">
+      <soap:operation soapAction="http://tempuri.org/Update_DeskId_For_Order" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Order_Detail">
+      <soap:operation soapAction="http://tempuri.org/Update_Order_Detail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueScoreEx">
+      <soap:operation soapAction="http://tempuri.org/GetValueScoreEx" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceScore">
+      <soap:operation soapAction="http://tempuri.org/GetPriceScore" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Write_Score_Value">
+      <soap:operation soapAction="http://tempuri.org/Write_Score_Value" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="POSServiceSoap12" type="tns:POSServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsServiceReady">
+      <soap12:operation soapAction="http://tempuri.org/IsServiceReady" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsDataReady">
+      <soap12:operation soapAction="http://tempuri.org/IsDataReady" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsUser">
+      <soap12:operation soapAction="http://tempuri.org/IsUser" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataQuery">
+      <soap12:operation soapAction="http://tempuri.org/DataQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcQuery">
+      <soap12:operation soapAction="http://tempuri.org/DataStoreProcQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcQuery_Param">
+      <soap12:operation soapAction="http://tempuri.org/DataStoreProcQuery_Param" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProcExecute">
+      <soap12:operation soapAction="http://tempuri.org/DataStoreProcExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataStoreProceduceAndMultiQuery">
+      <soap12:operation soapAction="http://tempuri.org/DataStoreProceduceAndMultiQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecute">
+      <soap12:operation soapAction="http://tempuri.org/DataExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteId">
+      <soap12:operation soapAction="http://tempuri.org/DataExecuteId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataMultiExecute">
+      <soap12:operation soapAction="http://tempuri.org/DataMultiExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataScalar">
+      <soap12:operation soapAction="http://tempuri.org/DataScalar" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataCommandBuilderUpdate">
+      <soap12:operation soapAction="http://tempuri.org/DataCommandBuilderUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataSaveImage">
+      <soap12:operation soapAction="http://tempuri.org/DataSaveImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataReadImage">
+      <soap12:operation soapAction="http://tempuri.org/DataReadImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteForProduct">
+      <soap12:operation soapAction="http://tempuri.org/DataExecuteForProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DataExecuteEdit_ForProduct">
+      <soap12:operation soapAction="http://tempuri.org/DataExecuteEdit_ForProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tran_Insert_for_Order">
+      <soap12:operation soapAction="http://tempuri.org/Tran_Insert_for_Order" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Tran_Insert_Receipt">
+      <soap12:operation soapAction="http://tempuri.org/Tran_Insert_Receipt" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoObject">
+      <soap12:operation soapAction="http://tempuri.org/SaveImage_IntoObject" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoEmployee">
+      <soap12:operation soapAction="http://tempuri.org/SaveImage_IntoEmployee" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveImage_IntoProduct">
+      <soap12:operation soapAction="http://tempuri.org/SaveImage_IntoProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Print_Order">
+      <soap12:operation soapAction="http://tempuri.org/Print_Order" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_DeskId_For_Order">
+      <soap12:operation soapAction="http://tempuri.org/Update_DeskId_For_Order" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Update_Order_Detail">
+      <soap12:operation soapAction="http://tempuri.org/Update_Order_Detail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetValueScoreEx">
+      <soap12:operation soapAction="http://tempuri.org/GetValueScoreEx" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPriceScore">
+      <soap12:operation soapAction="http://tempuri.org/GetPriceScore" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Write_Score_Value">
+      <soap12:operation soapAction="http://tempuri.org/Write_Score_Value" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="POSService">
+    <wsdl:port name="POSServiceSoap" binding="tns:POSServiceSoap">
+      <soap:address location="http://localhost:53459/POSService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="POSServiceSoap12" binding="tns:POSServiceSoap12">
+      <soap12:address location="http://localhost:53459/POSService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -35,7 +35,7 @@ namespace POS.HDT.Services.ASPService
             string connectionString = ConfigurationManager.ConnectionStrings["DataConnectionString"].ConnectionString;
 
             if (string.IsNullOrEmpty(connectionString))
-                connectionString = "server=192.168.1.99;User Id=root;password=1234;database=pos_spa;Allow Zero Datetime=True;Convert Zero Datetime=True";
+                connectionString = "server=localhost;User Id=admin;password=123456789;database=pos_hdt;Allow Zero Datetime=True;Convert Zero Datetime=True";
 
             return connectionString;
         }
