@@ -2,3 +2,12 @@ D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Kanri.Logic.dll
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Kanri.Logic.pdb
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\obj\Debug\POS.HDT.Kanri.Logic.dll
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Kanri.Logic\obj\Debug\POS.HDT.Kanri.Logic.pdb
+F:\Luan_W1\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Kanri.Logic.dll
+F:\Luan_W1\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Kanri.Logic.pdb
+F:\Luan_W1\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Common.Data.Base.dll
+F:\Luan_W1\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Common.Data.Domain.dll
+F:\Luan_W1\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Common.Data.Base.pdb
+F:\Luan_W1\POS.HDT.Kanri.Logic\bin\Debug\POS.HDT.Common.Data.Domain.pdb
+F:\Luan_W1\POS.HDT.Kanri.Logic\obj\Debug\POS.HDT.Kanri.Logic.csprojResolveAssemblyReference.cache
+F:\Luan_W1\POS.HDT.Kanri.Logic\obj\Debug\POS.HDT.Kanri.Logic.dll
+F:\Luan_W1\POS.HDT.Kanri.Logic\obj\Debug\POS.HDT.Kanri.Logic.pdb

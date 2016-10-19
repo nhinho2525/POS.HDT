@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoginLogic.cs" />
+    <Compile Include="MainLogic.cs" />
+    <Compile Include="RoleLogic.cs" />
     <Compile Include="UserLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -47,6 +50,10 @@
     <ProjectReference Include="..\POS.HDT.Common.Data.Base\POS.HDT.Common.Data.Base.csproj">
       <Project>{4ec22d04-64b9-4913-aae1-6a5a91895adf}</Project>
       <Name>POS.HDT.Common.Data.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\POS.HDT.Common.Data.Domain\POS.HDT.Common.Data.Domain.csproj">
+      <Project>{c179cb44-b731-4e7d-9e3a-20fc15ed183a}</Project>
+      <Name>POS.HDT.Common.Data.Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,3 +2,8 @@ D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\bin\Debug\POS.HDT.Common.D
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\bin\Debug\POS.HDT.Common.Data.Domain.pdb
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\obj\Debug\POS.HDT.Common.Data.Domain.dll
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Domain\obj\Debug\POS.HDT.Common.Data.Domain.pdb
+F:\Luan_W1\POS.HDT.Common.Data.Domain\bin\Debug\POS.HDT.Common.Data.Domain.dll
+F:\Luan_W1\POS.HDT.Common.Data.Domain\bin\Debug\POS.HDT.Common.Data.Domain.pdb
+F:\Luan_W1\POS.HDT.Common.Data.Domain\obj\Debug\POS.HDT.Common.Data.Domain.csprojResolveAssemblyReference.cache
+F:\Luan_W1\POS.HDT.Common.Data.Domain\obj\Debug\POS.HDT.Common.Data.Domain.dll
+F:\Luan_W1\POS.HDT.Common.Data.Domain\obj\Debug\POS.HDT.Common.Data.Domain.pdb

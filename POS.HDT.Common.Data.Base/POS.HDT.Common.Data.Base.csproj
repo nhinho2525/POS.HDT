@@ -50,6 +50,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="RoleDBAccess.cs" />
     <Compile Include="UserDBAccess.cs" />
     <Compile Include="Web References\POSService\Reference.cs">
       <AutoGen>True</AutoGen>

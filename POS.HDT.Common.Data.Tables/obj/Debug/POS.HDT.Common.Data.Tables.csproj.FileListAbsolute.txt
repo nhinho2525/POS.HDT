@@ -3,3 +3,8 @@ D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\bin\Debug\POS.HDT.Common.D
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.csprojResolveAssemblyReference.cache
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.dll
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.pdb
+F:\Luan_W1\POS.HDT.Common.Data.Tables\bin\Debug\POS.HDT.Common.Data.Tables.dll
+F:\Luan_W1\POS.HDT.Common.Data.Tables\bin\Debug\POS.HDT.Common.Data.Tables.pdb
+F:\Luan_W1\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.csprojResolveAssemblyReference.cache
+F:\Luan_W1\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.dll
+F:\Luan_W1\POS.HDT.Common.Data.Tables\obj\Debug\POS.HDT.Common.Data.Tables.pdb
