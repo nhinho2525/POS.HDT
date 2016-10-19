@@ -2,3 +2,11 @@ D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Store.Logic.dll
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Store.Logic.pdb
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\obj\Debug\POS.HDT.Store.Logic.dll
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\obj\Debug\POS.HDT.Store.Logic.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Common.Core.Logic.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Common.Data.Base.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\Excel.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Common.Data.Domain.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Common.Core.Logic.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Common.Data.Base.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\bin\Debug\POS.HDT.Common.Data.Domain.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Store.Logic\obj\Debug\POS.HDT.Store.Logic.csprojResolveAssemblyReference.cache

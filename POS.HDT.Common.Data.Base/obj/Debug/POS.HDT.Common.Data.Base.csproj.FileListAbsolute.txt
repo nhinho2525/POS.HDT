@@ -2,6 +2,7 @@ D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Dat
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Base.pdb
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.dll
 D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.pdb
+<<<<<<< HEAD
 F:\Luan_W1\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Base.dll.config
 F:\Luan_W1\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Base.dll
 F:\Luan_W1\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Base.pdb
@@ -12,3 +13,11 @@ F:\Luan_W1\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Tables.pdb
 F:\Luan_W1\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.csprojResolveAssemblyReference.cache
 F:\Luan_W1\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.dll
 F:\Luan_W1\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.pdb
+=======
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Base.dll.config
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Domain.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Tables.dll
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Domain.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\bin\Debug\POS.HDT.Common.Data.Tables.pdb
+D:\PROJECT\C#\Soft\POS.HDT\POS.HDT.Common.Data.Base\obj\Debug\POS.HDT.Common.Data.Base.csprojResolveAssemblyReference.cache
+>>>>>>> 7ad1bfeeb28653e455e127ea5fd8f5cccb519940

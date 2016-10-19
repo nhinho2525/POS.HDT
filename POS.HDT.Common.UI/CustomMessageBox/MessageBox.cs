@@ -3,7 +3,7 @@ using POS.HDT.Common.Core.Logic.Enums;
 using System;
 using System.Windows.Forms;
 
-namespace POS.HDT.Common.UI.CustomMessageBox
+namespace POS.HDT.Common.Core.UI.CustomMessageBox
 {
     public partial class MessageBox : Form
     {
@@ -83,10 +83,12 @@ namespace POS.HDT.Common.UI.CustomMessageBox
             messageBox.lblTitle.Text = title;
             if (icon == Config.CUSTOM_MESSAGEBOX_ICON.Information)
             {
+                //TODO
                 //messageBox.pbIcon.BackgroundImage = Properties.Resources.information;
             }
             if (icon == Config.CUSTOM_MESSAGEBOX_ICON.Error)
             {
+                //TODO
                 //messageBox.pbIcon.BackgroundImage = Properties.Resources.thoat;
             }
             messageBox.btnOK.Visible = false;
@@ -109,10 +111,12 @@ namespace POS.HDT.Common.UI.CustomMessageBox
             messageBox.lblTitle.Text = title;
             if (icon == Config.CUSTOM_MESSAGEBOX_ICON.Information)
             {
+                //TODO
                 //messageBox.pbIcon.BackgroundImage = Properties.Resources.information;
             }
             if (icon == Config.CUSTOM_MESSAGEBOX_ICON.Error)
             {
+                //TODO
                 //messageBox.pbIcon.BackgroundImage = Properties.Resources.thoat;
             }
             if (messageBoxButton.Equals(Config.CUSTOM_MESSAGEBOX_BUTTON.OK))
@@ -178,10 +182,6 @@ namespace POS.HDT.Common.UI.CustomMessageBox
 
         private void MessageBox_Load(object sender, EventArgs e)
         {
-            //btnOK.Text = Common.clsLanguages.RM.GetString("00008");
-            //btnAccept.Text = Common.clsLanguages.RM.GetString("00008");
-            //btnCancel.Text = Common.clsLanguages.RM.GetString("00009");
-
             btnOK.Text = Languages.GetResource("Agree");
             btnAccept.Text = Languages.GetResource("Agree");
             btnCancel.Text = Languages.GetResource("Cancel");
