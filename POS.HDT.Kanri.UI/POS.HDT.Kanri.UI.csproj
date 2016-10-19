@@ -108,6 +108,10 @@
       <Project>{02c696fa-e2a5-4680-a5d9-7ef4dc8f59b9}</Project>
       <Name>POS.HDT.Common.Core.Logic</Name>
     </ProjectReference>
+    <ProjectReference Include="..\POS.HDT.Common.Data.Base\POS.HDT.Common.Data.Base.csproj">
+      <Project>{4ec22d04-64b9-4913-aae1-6a5a91895adf}</Project>
+      <Name>POS.HDT.Common.Data.Base</Name>
+    </ProjectReference>
     <ProjectReference Include="..\POS.HDT.Common.Data.Domain\POS.HDT.Common.Data.Domain.csproj">
       <Project>{c179cb44-b731-4e7d-9e3a-20fc15ed183a}</Project>
       <Name>POS.HDT.Common.Data.Domain</Name>

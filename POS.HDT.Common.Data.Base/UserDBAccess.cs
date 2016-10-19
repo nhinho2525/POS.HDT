@@ -11,7 +11,7 @@ namespace POS.HDT.Common.Data.Base
         {
             long id = 0;
             string queryStr = "INSERT INTO";
-            queryStr += " users(UserId, Pwd, LastLogin, Status, CreatedBy, CreatedDate, ModifiedBy, ModifiedDate, RoleId)";
+            queryStr += " user(UserId, Pwd, LastLogin, Status, CreatedBy, CreatedDate, ModifiedBy, ModifiedDate, RoleId)";
             queryStr += " VALUES(";
             queryStr += string.Format("'{0}'", obj.UserId);
             queryStr += string.Format(", '{0}'", obj.Pwd);
@@ -29,7 +29,7 @@ namespace POS.HDT.Common.Data.Base
 
         public void Edit(Users obj)
         {
-            string queryStr = "UPDATE users SET";
+            string queryStr = "UPDATE user SET";
             queryStr += string.Format(" Pwd = '{0}'", obj.Pwd);
             queryStr += string.Format(" ,LastLogin = '{0}'", obj.LastLogin);
             queryStr += string.Format(" ,Status = '{0}'", obj.Status);
@@ -92,7 +92,7 @@ namespace POS.HDT.Common.Data.Base
         }
         public void Delete(string id, string stt)
         {
-            string queryStr = string.Format("UPDATE users SET Status = '{0}' WHERE  UserId = '{1}'", stt, id);
+            string queryStr = string.Format("UPDATE user SET Status = '{0}' WHERE  UserId = '{1}'", stt, id);
             PosService.DataExecute(Username, Password, queryStr, ref errorString);
         }
 
@@ -100,7 +100,7 @@ namespace POS.HDT.Common.Data.Base
         {
             Users user = new Users();
             DataSet dataset = new DataSet();
-            string queryStr = string.Format("SELECT * FROM users WHERE  UserId = '{0}'", pIdOrUsername);
+            string queryStr = string.Format("SELECT  `UserId`, `Pwd`, `Status`, `RoleId`  FROM user WHERE  UserId = '{0}'", pIdOrUsername);
             PosService.DataQuery(Username, Password, queryStr, ref dataset, "x", ref errorString);
 
             if (!string.IsNullOrEmpty(errorString))
@@ -108,13 +108,14 @@ namespace POS.HDT.Common.Data.Base
 
             if (dataset.Tables["x"].Rows.Count > 0)
             {
-
-                user.LastLogin = dataset.Tables["x"].Rows[0][UserColumn.LastLogin].ToString();
+                user.UserId = dataset.Tables["x"].Rows[0][UserColumn.UserId].ToString();
+                user.Pwd = dataset.Tables["x"].Rows[0][UserColumn.Pwd].ToString();
+                //user.LastLogin = dataset.Tables["x"].Rows[0][UserColumn.LastLogin].ToString();
                 user.Status = dataset.Tables["x"].Rows[0][UserColumn.Status].ToString();
-                user.CreatedBy = dataset.Tables["x"].Rows[0][UserColumn.CreatedBy].ToString();
-                user.CreatedDate = dataset.Tables["x"].Rows[0][UserColumn.CreatedDate].ToString();
-                user.ModifiedBy = dataset.Tables["x"].Rows[0][UserColumn.ModifiedBy].ToString();
-                user.ModifiedDate = dataset.Tables["x"].Rows[0][UserColumn.ModifiedDate].ToString();
+                //user.CreatedBy = dataset.Tables["x"].Rows[0][UserColumn.CreatedBy].ToString();
+                //user.CreatedDate = dataset.Tables["x"].Rows[0][UserColumn.CreatedDate].ToString();
+                //user.ModifiedBy = dataset.Tables["x"].Rows[0][UserColumn.ModifiedBy].ToString();
+                //user.ModifiedDate = dataset.Tables["x"].Rows[0][UserColumn.ModifiedDate].ToString();
                 user.RoleId = dataset.Tables["x"].Rows[0][UserColumn.RoleId].ToString();
             }
             else
@@ -126,12 +127,12 @@ namespace POS.HDT.Common.Data.Base
         /// Get all Users
         /// </summary>
         /// <returns></returns>
-        public DataTable GetUsers()
+        public DataTable GetUsers(Users user)
         {
             DataTable dtUsers = new DataTable();
             DataSet dataset = new DataSet();
-            string queryStr = "SELECT * FROM users";
-            PosService.DataQuery(Username, Password, queryStr, ref dataset, "x", ref errorString);
+            string queryStr = "SELECT * FROM user";
+            PosService.DataQuery(user.UserId, user.Pwd.ToString(), queryStr, ref dataset, "x", ref errorString);
 
             if (!string.IsNullOrEmpty(errorString))
                 return null;

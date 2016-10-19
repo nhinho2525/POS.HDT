@@ -19,9 +19,9 @@ namespace POS.HDT.Kanri.Logic
             errorString = "";
         }
 
-        public DataTable LoadUsers()
+        public DataTable LoadUsers(Users user)
         {
-            return userDBAccess.GetUsers();
+            return userDBAccess.GetUsers(user);
         }
     }
 }

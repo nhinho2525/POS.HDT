@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cboRoleId = new System.Windows.Forms.ComboBox();
             this.lblMaDT = new System.Windows.Forms.Label();
             this.cboStatus = new System.Windows.Forms.ComboBox();
@@ -51,14 +51,14 @@
             this.lblUserId = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvUsers = new System.Windows.Forms.DataGridView();
-            this.pInput = new System.Windows.Forms.Panel();
-            this.lblCreator = new System.Windows.Forms.Label();
             this.colNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLastLoginTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.pInput = new System.Windows.Forms.Panel();
+            this.lblCreator = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.pInput.SuspendLayout();
@@ -150,7 +150,7 @@
             // linkNumber
             // 
             this.linkNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkNumber.Location = new System.Drawing.Point(1057, 299);
+            this.linkNumber.Location = new System.Drawing.Point(882, 295);
             this.linkNumber.Name = "linkNumber";
             this.linkNumber.Size = new System.Drawing.Size(46, 20);
             this.linkNumber.TabIndex = 111;
@@ -165,7 +165,7 @@
             this.bntNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bntNext.ForeColor = System.Drawing.Color.Transparent;
-            this.bntNext.Location = new System.Drawing.Point(914, 286);
+            this.bntNext.Location = new System.Drawing.Point(933, 286);
             this.bntNext.Name = "bntNext";
             this.bntNext.Size = new System.Drawing.Size(75, 33);
             this.bntNext.TabIndex = 112;
@@ -179,7 +179,7 @@
             this.bntPre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bntPre.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.bntPre.ForeColor = System.Drawing.Color.Transparent;
-            this.bntPre.Location = new System.Drawing.Point(781, 287);
+            this.bntPre.Location = new System.Drawing.Point(800, 287);
             this.bntPre.Name = "bntPre";
             this.bntPre.Size = new System.Drawing.Size(75, 32);
             this.bntPre.TabIndex = 110;
@@ -307,7 +307,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.groupBox1.Location = new System.Drawing.Point(0, 348);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1008, 381);
+            this.groupBox1.Size = new System.Drawing.Size(1027, 381);
             this.groupBox1.TabIndex = 97;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách người sử dụng";
@@ -335,50 +335,11 @@
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.ReadOnly = true;
             this.dgvUsers.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvUsers.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUsers.Size = new System.Drawing.Size(1002, 356);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUsers.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvUsers.Size = new System.Drawing.Size(1021, 356);
             this.dgvUsers.TabIndex = 24;
-            // 
-            // pInput
-            // 
-            this.pInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.pInput.Controls.Add(this.lblCreator);
-            this.pInput.Controls.Add(this.cboRoleId);
-            this.pInput.Controls.Add(this.lblMaDT);
-            this.pInput.Controls.Add(this.cboStatus);
-            this.pInput.Controls.Add(this.btnExcel);
-            this.pInput.Controls.Add(this.lblTB1);
-            this.pInput.Controls.Add(this.lblTB);
-            this.pInput.Controls.Add(this.bntReset);
-            this.pInput.Controls.Add(this.linkNumber);
-            this.pInput.Controls.Add(this.bntNext);
-            this.pInput.Controls.Add(this.bntPre);
-            this.pInput.Controls.Add(this.bntExit);
-            this.pInput.Controls.Add(this.bntLuu);
-            this.pInput.Controls.Add(this.bntSeach);
-            this.pInput.Controls.Add(this.txtPwd);
-            this.pInput.Controls.Add(this.txtUserId);
-            this.pInput.Controls.Add(this.lblRoleId);
-            this.pInput.Controls.Add(this.lblStatus);
-            this.pInput.Controls.Add(this.lblObjectId);
-            this.pInput.Controls.Add(this.lblPwd);
-            this.pInput.Controls.Add(this.lblUserId);
-            this.pInput.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pInput.Location = new System.Drawing.Point(0, 0);
-            this.pInput.Name = "pInput";
-            this.pInput.Size = new System.Drawing.Size(1008, 342);
-            this.pInput.TabIndex = 98;
-            // 
-            // lblCreator
-            // 
-            this.lblCreator.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreator.Location = new System.Drawing.Point(139, 97);
-            this.lblCreator.Name = "lblCreator";
-            this.lblCreator.Size = new System.Drawing.Size(284, 23);
-            this.lblCreator.TabIndex = 116;
-            this.lblCreator.Text = "label1";
             // 
             // colNo
             // 
@@ -424,11 +385,50 @@
             this.colDelete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colDelete.Width = 80;
             // 
+            // pInput
+            // 
+            this.pInput.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.pInput.Controls.Add(this.lblCreator);
+            this.pInput.Controls.Add(this.cboRoleId);
+            this.pInput.Controls.Add(this.lblMaDT);
+            this.pInput.Controls.Add(this.cboStatus);
+            this.pInput.Controls.Add(this.btnExcel);
+            this.pInput.Controls.Add(this.lblTB1);
+            this.pInput.Controls.Add(this.lblTB);
+            this.pInput.Controls.Add(this.bntReset);
+            this.pInput.Controls.Add(this.linkNumber);
+            this.pInput.Controls.Add(this.bntNext);
+            this.pInput.Controls.Add(this.bntPre);
+            this.pInput.Controls.Add(this.bntExit);
+            this.pInput.Controls.Add(this.bntLuu);
+            this.pInput.Controls.Add(this.bntSeach);
+            this.pInput.Controls.Add(this.txtPwd);
+            this.pInput.Controls.Add(this.txtUserId);
+            this.pInput.Controls.Add(this.lblRoleId);
+            this.pInput.Controls.Add(this.lblStatus);
+            this.pInput.Controls.Add(this.lblObjectId);
+            this.pInput.Controls.Add(this.lblPwd);
+            this.pInput.Controls.Add(this.lblUserId);
+            this.pInput.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pInput.Location = new System.Drawing.Point(0, 0);
+            this.pInput.Name = "pInput";
+            this.pInput.Size = new System.Drawing.Size(1027, 342);
+            this.pInput.TabIndex = 98;
+            // 
+            // lblCreator
+            // 
+            this.lblCreator.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreator.Location = new System.Drawing.Point(139, 97);
+            this.lblCreator.Name = "lblCreator";
+            this.lblCreator.Size = new System.Drawing.Size(284, 23);
+            this.lblCreator.TabIndex = 116;
+            this.lblCreator.Text = "label1";
+            // 
             // frmUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.ClientSize = new System.Drawing.Size(1027, 729);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pInput);
             this.Name = "frmUser";

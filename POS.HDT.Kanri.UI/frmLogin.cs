@@ -63,11 +63,11 @@ namespace POS.HDT.Kanri.UI
                 if (ok)
                 {
                     Program.curUser = loginLogic.user;
-                    Program.username = loginLogic.username;
-                    Program.password = loginLogic.password;
+                    Program.username = loginLogic.Username;
+                    Program.password = loginLogic.Password;
                     if (Program.curUser.RoleId == "admin")
                     {
-                        if (string.IsNullOrEmpty(loginLogic.errorString))
+                        if (string.IsNullOrEmpty(loginLogic.ErrorString))
                         {
                             frmMain frm = new frmMain();
                             frm.Show();
@@ -77,7 +77,7 @@ namespace POS.HDT.Kanri.UI
                             this.Hide();
                         }
                         else
-                            MessageBox.Show(loginLogic.errorString, "Lôi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show(loginLogic.ErrorString, "Lôi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {

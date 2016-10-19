@@ -98,7 +98,7 @@ namespace POS.HDT.Services.ASPService
             DataSet dataset = new DataSet();
             //Hung 09-12-2014
             //string strQuery = string.Format("SELECT * FROM users WHERE Status='1' And UserId = '{0}' AND Pwd = '{1}'", pUsername, pPassword);
-            string strQuery = string.Format("SELECT * FROM employees WHERE UserName = '{0}' AND Password = '{1}'", pUsername, pPassword);
+            string strQuery = string.Format("SELECT * FROM user WHERE UserId = '{0}' AND Pwd = '{1}'", pUsername, pPassword);
             DataAccess.DataQuery(GetConnectionString(), strQuery, ref dataset, "x", ref pError);
 
             if (dataset.Tables["x"].Rows.Count > 0)

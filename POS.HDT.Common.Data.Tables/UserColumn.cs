@@ -16,6 +16,6 @@ namespace POS.HDT.Common.Data.Tables
         public const string CreatedDate = "CreatedDate";
         public const string ModifiedBy = "ModifiedBy";
         public const string ModifiedDate = "ModifiedDate";
-        public const string RoleId = "RoldId";
+        public const string RoleId = "RoleId";
     }
 }

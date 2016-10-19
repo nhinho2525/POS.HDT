@@ -201,14 +201,14 @@
             // mnUser
             // 
             this.mnUser.Name = "mnUser";
-            this.mnUser.Size = new System.Drawing.Size(152, 22);
+            this.mnUser.Size = new System.Drawing.Size(146, 22);
             this.mnUser.Text = "Nhân Viên";
             this.mnUser.Click += new System.EventHandler(this.mnUser_Click);
             // 
             // mnObject
             // 
             this.mnObject.Name = "mnObject";
-            this.mnObject.Size = new System.Drawing.Size(152, 22);
+            this.mnObject.Size = new System.Drawing.Size(146, 22);
             this.mnObject.Text = "Nhóm Quyền";
             this.mnObject.Click += new System.EventHandler(this.mnObject_Click);
             // 
@@ -260,6 +260,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1026, 737);
             this.Controls.Add(this.panel2);
+            this.IsMdiContainer = true;
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";

@@ -23,7 +23,7 @@ namespace POS.HDT.Kanri.UI
         {
             userLogic = new UserLogic();
             // Load data for dgvUsers
-            dgvUsers.DataSource = userLogic.LoadUsers();
+            dgvUsers.DataSource = userLogic.LoadUsers(Program.curUser);
             // Load first row on screen
         }
     }

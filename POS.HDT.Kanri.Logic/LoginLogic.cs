@@ -12,16 +12,19 @@ namespace POS.HDT.Kanri.Logic
     {
         private UserDBAccess userDBAccess;
         public Users user;
-        public string username;
-        public string password;
-        public string errorString;
+        public string Username { get; set; }
+        public string Password
+        {
+            get; set;
+        }
+        public string ErrorString { get; set; }
         public LoginLogic()
         {
             userDBAccess = new UserDBAccess();
             user = new Users();
-            username = "";
-            password = "";
-            errorString = "";
+            Username = "";
+            Password = "";
+            ErrorString = "";
         }
         //TODO: Code Logic here
         // Commit thu
@@ -35,9 +38,9 @@ namespace POS.HDT.Kanri.Logic
         {
             bool result = userDBAccess.CheckLogin(username, password);
             user = userDBAccess.users;
-            username = userDBAccess.Username;
-            password = userDBAccess.Password;
-            errorString = userDBAccess.errorString;
+            Username = userDBAccess.Username;
+            Password = userDBAccess.Password;
+            ErrorString = userDBAccess.errorString;
             return result;
         }
     }
