@@ -81,8 +81,8 @@ namespace POS.HDT.Common.Core.Logic.Classes
         public static string GetResource(string skey)
         {
             string sResult = string.Empty;
-            //string FileName = "~/Resource/LangResource.xls";
-            DataTableCollection dtc = ReadExcelFromURL(@"LangResource.xls");
+            //string FileName = "@LangResource.xls";
+            DataTableCollection dtc = ReadExcelFromPath(@"LangResource.xls");
             Hashtable HasTableLang = new Hashtable();
             try
             {
@@ -148,14 +148,14 @@ namespace POS.HDT.Common.Core.Logic.Classes
         }
         #endregion
 
-        #region ReadExcelFromURL
+        #region ReadExcelFromURL/Path
         public static DataTableCollection ReadExcelFromURL(string FullFileName)
         {
             try
             {
-
-                string path = HttpContext.Current.Server.MapPath("~") + "\\bin\\" + FullFileName;
-                string filePath = path;
+                
+                string serverPath = HttpContext.Current.Server.MapPath("~");
+                string filePath = serverPath + "\\bin\\" + FullFileName;
                 Stream data = GetData(filePath);
                 IExcelDataReader excelReader = ExcelReaderFactory.CreateBinaryReader(data);
                 DataSet ds = excelReader.AsDataSet();
@@ -163,6 +163,21 @@ namespace POS.HDT.Common.Core.Logic.Classes
                 #region Old Code
 
                 #endregion
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public static DataTableCollection ReadExcelFromPath(string FullFileName)
+        {
+            try
+            {
+                Stream data = GetData(FullFileName);
+                IExcelDataReader excelReader = ExcelReaderFactory.CreateBinaryReader(data);
+                DataSet ds = excelReader.AsDataSet();
+                return ds.Tables;
             }
             catch (Exception)
             {
